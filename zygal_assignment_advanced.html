@@ -4,17 +4,29 @@
 <head>
     <title>Zygal Assignment Advanced</title>
     <style>
+
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
         .main-div {
-            border: 1px solid;
+            
             /* display: flex; */
             justify-content: center;
             height: 100%;
             padding: 3%;
+            border-radius: 80px;
+            background-image: linear-gradient(to right top, #00ffe8, #25f6f8, #54ebff, #7adffd, #97d4f4);
+            
         }
 
         .dropdown-div {
             display: flex;
             justify-content: center;
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
         }
 
         .months,
@@ -24,6 +36,16 @@
             /* position: relative; */
             font-family: 'Times New Roman';
             font-size: 150%;
+            border-radius: 40px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: transparent;
+        }
+
+        .years:hover, 
+        .months:hover, 
+        .input:hover {
+            border: 1px solid #2ecc70;
+            transition: .2s ease-in;
         }
 
         .input {
@@ -31,6 +53,10 @@
             font-family: 'Times New Roman';
             font-size: 150%;
             width: 15%;
+            border-radius: 40px;
+            border: 1px solid transparent;
+            background-color: #2ecc7042;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .button {
@@ -38,6 +64,16 @@
             font-family: 'Times New Roman';
             font-size: 150%;
             width: 10%;
+            background-color: mediumspringgreen;
+            border: none;
+            border-radius: 40px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .button:hover {
+            background-color: rgb(0, 204, 126);
+            transition: .2s ease-in;
+
         }
 
         ul {
@@ -48,6 +84,14 @@
             margin: 0%;
             padding: 1% 0%;
             border: 1px solid;
+            background-color: #2ecc7063;
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
+            border: 1px solid grey;
+        }
+
+        .sunday {
+            color: red;
         }
 
         .weekdays li {
@@ -56,12 +100,18 @@
             text-align: center;
             padding: 1% 0%;
             font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
         }
 
         .days {
             padding: 1% 0%;
             margin: 0;
-            border: 1px solid;
+            border: 1px solid grey;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
         }
 
         .days li {
@@ -74,7 +124,16 @@
             padding: 1% 0%;
         }
 
+        form {
+            text-align: center;
+        }
+
     </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -132,11 +191,11 @@
                     <li>THR</li>
                     <li>FRI</li>
                     <li>SAT</li>
-                    <li>SUN</li>
+                    <li class="sunday">SUN</li>
                 </ul>
 
                 <ul class="days" id="days-of-month">
-                    <h5 align="center"><i>Please select "Month" or "Year" to display days</i></h5>
+                    <h5 align="center"><p>Please select "Month" or "Year" to display days</p></h5>
                 </ul>
 
             </div>
